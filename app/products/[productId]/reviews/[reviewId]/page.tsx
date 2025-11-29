@@ -1,9 +1,14 @@
+import { notFound } from "next/navigation";
+
 export default async function ReviewPage({ params, }: {
     params: Promise<{ productId: string, reviewId: string }>;
 }) {
     const reviewId = (await params).reviewId
     const productId = (await params).productId
 
+    if (parseInt(reviewId) > 5) {
+        return notFound()
+    }
     return (
         <div>
             <h1>Product ID: {productId}</h1>
