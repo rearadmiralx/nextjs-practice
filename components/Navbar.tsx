@@ -25,7 +25,7 @@ export default function Navbar() {
                           transition-colors duration-200
                           ${
                             isActive
-                                ? "font-bold text-blue-600"
+                                ? "font-bold text-blue-500"
                                 : "text-shadow-white hover:text-blue-600 hover:font-bold"
                             }
                         `}
